@@ -18,6 +18,7 @@ No installation required! Just open the index.html in your favorite web browser.
 * Javascript
 * Fetch API
 * NodeJS proxy
+* JSDoc
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

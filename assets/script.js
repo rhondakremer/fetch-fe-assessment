@@ -38,7 +38,8 @@ const sanitizeAndSortData = (data) => {
 }
 
 /** 
- * Generates an HTML table and appends the sorted API information to the table
+ * Removes loading element from screen
+ * Appends the sorted API information to HTML table
  * @param {object} listIdObj - The sorted data separated by listId.
  */
 const populateTable = (listIdObj) => {
