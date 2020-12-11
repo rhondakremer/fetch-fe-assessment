@@ -65,5 +65,5 @@ const populateTable = (listIdObj) => {
     }
 }
 
-// fetchData();
+fetchData();
 
