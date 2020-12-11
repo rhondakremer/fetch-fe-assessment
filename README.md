@@ -25,4 +25,5 @@ Thank you [Fetch Rewards](https://www.fetchrewards.com/) for your consideration.
 ## More Information
 Contact me at rhondakremer@gmail.com
 
-![Image of deployed application](./assets/screenshot.png)
+![Image of deployed application- loading screen](./assets/screenshot2.png)
+![Image of deployed application- loaded screen](./assets/screenshot.png)

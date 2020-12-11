@@ -42,6 +42,8 @@ const sanitizeAndSortData = (data) => {
  * @param {object} listIdObj - The sorted data separated by listId.
  */
 const populateTable = (listIdObj) => {
+    document.getElementById("loader-holder").remove();
+    document.getElementById("outer").classList.remove("hidden");
     const tableHeader = document.getElementById("table-header");
     const table = document.getElementById("data-table");
     const headerRow = tableHeader.insertRow(0);

@@ -14,6 +14,37 @@ h1 {
     font-size: 45px;
 }
 
+#loader-holder {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    position: relative;
+}
+
+#loader {
+    border: 8px solid #9ae7e5;
+    border-top: 8px solid#5f2c82;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    width: 100%;
+    height: 100%;
+}
+
+#loader-text {
+    position: absolute;
+    display: inline-block;
+    margin: 0;
+    top: 60%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 #outer {
     width: 60%;
     margin: auto auto;
@@ -68,6 +99,10 @@ tr:nth-child(even) {
 
 #table-holder tr:nth-child(even) {
     background-color: #8f63ac3f;
+}
+
+.hidden {
+    display: none;
 }
 
 @media only screen and (max-width: 455px) {
