@@ -53,7 +53,7 @@ td {
     border: 1px 0px solid black;
     padding: 15px;
     text-align: left;
-    vertical-align:middle;
+    vertical-align: middle;
     font-size: 16px;
     border-bottom: solid 1px rgba(255,255,255,0.1);
 }
@@ -68,4 +68,18 @@ tr:nth-child(even) {
 
 #table-holder tr:nth-child(even) {
     background-color: #8f63ac3f;
+}
+
+@media only screen and (max-width: 455px) {
+    #outer {
+        width: 90%;
+    }
+
+    th {
+        font-size: 15px;
+    }
+
+    td {
+        font-size: 12px;
+    }
 }
