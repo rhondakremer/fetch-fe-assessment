@@ -1,14 +1,21 @@
+/** 
+ * Fetches data from the fetch hiring API with a proxy to enable cross origin requests 
+*/
 const fetchData = () => {
-    const corsAnywhereProxy = 'https://cors-anywhere.herokuapp.com/';
+    const proxyUrl = 'https://quiet-journey-99569.herokuapp.com/';
     const fetchApi = 'https://fetch-hiring.s3.amazonaws.com/hiring.json';
 
-    fetch(corsAnywhereProxy + fetchApi)
+    fetch(proxyUrl + fetchApi)
         .then(response => response.json())
         .then(data => {
             sanitizeAndSortData(data);
         })
 }
 
+/** 
+ * Parses the data received as an unsorted array to eliminate items with invalid names and sort the items, first by listId then by name
+ * @param {array} data - Incoming data from API.
+ */
 const sanitizeAndSortData = (data) => {
     let listIdObj = {};
     for (let i = 0; i < data.length; i++) {
@@ -30,6 +37,10 @@ const sanitizeAndSortData = (data) => {
     populateTable(listIdObj);
 }
 
+/** 
+ * Generates an HTML table and appends the sorted API information to the table
+ * @param {object} listIdObj - The sorted data separated by listId.
+ */
 const populateTable = (listIdObj) => {
     const tableHeader = document.getElementById("table-header");
     const table = document.getElementById("data-table");
@@ -52,5 +63,5 @@ const populateTable = (listIdObj) => {
     }
 }
 
-fetchData();
+// fetchData();
 
