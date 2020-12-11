@@ -1,6 +1,9 @@
 # Fetch Frontend Assessment
 
-This is a frontend assessment created by Rhonda Kremer as part of the Fetch hiring process. 
+This is a frontend assessment created by Rhonda Kremer as part of the Fetch hiring process. Data is pulled from a provided API and displayed to the user with the following requirements:
+* Display all the items grouped by "listId"
+* Sort the results first by "listId" then by "name" when displaying.
+* Filter out any items where "name" is blank or null.
 
 ## Deployment
 https://rhondakremer.github.io/fetch-fe-assessment/
