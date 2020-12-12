@@ -20,7 +20,7 @@ const sanitizeAndSortData = (data) => {
     let listIdObj = {};
     for (let i = 0; i < data.length; i++) {
         let current = data[i];
-        // filter our data without name and group by listId
+        // filter out data without name and group by listId
         if (current.name) {
             if (current.listId in listIdObj) {
                 listIdObj[current.listId].push(current);
@@ -38,13 +38,10 @@ const sanitizeAndSortData = (data) => {
 }
 
 /** 
- * Removes loading element from screen
  * Appends the sorted API information to HTML table
  * @param {object} listIdObj - The sorted data separated by listId.
  */
 const populateTable = (listIdObj) => {
-    document.getElementById("loader-holder").remove();
-    document.getElementById("outer").classList.remove("hidden");
     const tableHeader = document.getElementById("table-header");
     const table = document.getElementById("data-table");
     const headerRow = tableHeader.insertRow(0);
@@ -64,6 +61,15 @@ const populateTable = (listIdObj) => {
             counter++;
         }
     }
+    changeLoading();
+}
+
+/** 
+ * Removes loading element from screen and shows table
+ */
+const changeLoading = () => {
+    document.getElementById("loader-holder").remove();
+    document.getElementById("outer").classList.remove("hidden");
 }
 
 fetchData();
